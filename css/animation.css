@@ -1,0 +1,33 @@
+@keyframes running-line-anim {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes running-circle-anim {
+    100% {
+        transform: rotate(359deg);
+    }
+}
+
+@keyframes to-right {
+    100% {
+        transform: translateX(20px);
+    }
+}
+
+@keyframes to-left {
+    100% {
+        transform: translateX(-20px);
+    }
+}
+
+@keyframes disappear {
+    100% {
+        opacity: 0;
+        transform: scale(1.5);
+    }
+}

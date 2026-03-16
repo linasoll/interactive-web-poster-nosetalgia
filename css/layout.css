@@ -1,0 +1,252 @@
+body {
+    background-color: #F8EBE2;
+    font-family: "Montserrat";
+    font-weight: 300;
+}
+
+/* containers */
+
+section {
+    display: flex;
+    box-sizing: border-box;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    padding: 80px 80px;
+}
+
+#header {
+    padding: 40px;
+}
+
+#hero {
+    height: 80vh;
+
+    background-image: url(../images/pink-bg.png);
+    background-size: 100% 100%;
+
+    justify-content: center;
+}
+
+#lab {
+    background-image: url(../images/orange-bg.png);
+    background-size: 100% 100%;
+}
+
+#final {
+    background-image: url(../images/grad-bg.png);
+    background-size: cover;
+    overflow: hidden;
+    position: relative;
+}
+
+#footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: #DA8590;
+}
+
+.heading-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-bottom: 40px;
+}
+
+#running-text-hero {
+  position: absolute;
+  z-index: -1;
+  border-radius: 50%;
+  animation: running-circle-anim 20s linear infinite;
+}
+
+.lab-container {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+}
+
+.lab-container-interactive {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.feeling-container {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    width: 400px;
+}
+
+.left-feeling-container {
+    align-items: flex-start;
+}
+
+.right-feeling-container {
+    align-items: flex-end;
+}
+
+.package-container {
+    display: flex;
+    width: 100%;
+    gap: 20px
+}
+
+/* fonts */
+
+h2 {
+    font-family: "Literature Decor";
+    font-size: 70px;
+    text-align: center;
+}
+
+#h2-lab {
+    color: #DC9B7E;
+}
+
+#h2-package {
+    color: #B8B674;
+}
+
+#h2-final {
+    color: #F8EBE2;
+}
+
+.text {
+    font-size: 20px;
+}
+
+.text-footer {
+    color: #F8EBE2;
+}
+
+.instruction {
+    text-align: center;
+}
+
+#instruction-lab {
+    color: #A8684C;
+}
+
+#instruction-package {
+    color: #86833F;
+}
+
+#instruction-final {
+    color: #F8EBE2;
+}
+
+.running-line-item-hero {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform-origin: 0 0;
+    white-space: pre;
+    letter-spacing: 3px;
+}
+
+.running-line-item {
+    font-weight: 600;
+    font-size: 40px;
+    line-height: 1;
+    color: #DA8590;
+    animation: running-line-anim 3s ease-in-out infinite alternate;
+}
+
+#counter {
+    font-family: "Literature Decor";
+    font-size: 50px;
+    color:  #DC9B7E;
+}
+
+.final-word {
+    font-weight: 600;
+    font-size: 40px;
+    line-height: 1;
+    color:#F8EBE2;
+}
+
+/* images */
+
+.logo {
+    width: 150px;
+}
+
+.heading {
+    width: 100%;
+}
+
+.feeling {
+    height: 60px;
+}
+
+.img-package {
+    width: calc((100% - 100px) / 6)
+}
+
+.img-final {
+    width: 400px;
+}
+
+.star-l {
+    width: 85px;
+}
+
+.star-m {
+    width: 50px;
+}
+
+.star-s {
+    width: 30px;
+}
+
+/* other elements */
+
+.feeling {
+    animation-iteration-count: infinite;
+    animation-duration: 3s;
+    animation-timing-function: ease-in-out;
+    animation-direction: alternate;
+    cursor: grab;
+}
+
+.feeling.used {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.feeling-left {
+    animation-name: to-right;
+}
+
+.feeling-right {
+    animation-name: to-left;
+}
+
+#calmness, #joy {
+    transform: translateX(60px);
+}
+
+#warm {
+    transform: translateX(30px);
+}
+
+#hope, #love {
+    transform: translateX(-60px);
+}
+
+#cosiness {
+    transform: translateX(-30px);
+}
+
+.final-item {
+    position: absolute;
+    pointer-events: none;
+    user-select: none;
+    animation: disappear 3s;
+}
