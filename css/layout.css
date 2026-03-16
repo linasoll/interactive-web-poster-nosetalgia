@@ -213,6 +213,7 @@ h2 {
     animation-timing-function: ease-in-out;
     animation-direction: alternate;
     cursor: grab;
+    user-select: none;
 }
 
 .feeling.used {
