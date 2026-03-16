@@ -73,7 +73,7 @@ function createSmell() {
     counterNumber++;
     counter.textContent = `${counterNumber}/5`;
 
-    flask.src = `../images/lab${counterNumber}.svg`;
+    flask.src = `images/lab${counterNumber}.svg`;
   });
 };
 
@@ -95,39 +95,39 @@ function chooseBottle() {
                 previousActive.classList.remove("active-bottle");
 
                 if (previousActive === bottle1) {
-                    bottle1.src = "../images/inactive1.svg";
+                    bottle1.src = "images/inactive1.svg";
                 } else if (previousActive === bottle2) {
-                    bottle2.src = "../images/inactive2.svg";
+                    bottle2.src = "images/inactive2.svg";
                 } else if (previousActive === bottle3) {
-                    bottle3.src = "../images/inactive3.svg";
+                    bottle3.src = "images/inactive3.svg";
                 } else if (previousActive === bottle4) {
-                    bottle4.src = "../images/inactive4.svg";
+                    bottle4.src = "images/inactive4.svg";
                 } else if (previousActive === bottle5) {
-                    bottle5.src = "../images/inactive5.svg";
+                    bottle5.src = "images/inactive5.svg";
                 } else if (previousActive === bottle6) {
-                    bottle6.src = "../images/inactive6.svg";
+                    bottle6.src = "images/inactive6.svg";
                 }
             }
 
             el.classList.add("active-bottle");
             if (el === bottle1) {
-                bottle1.src = "../images/active1.svg";
-                chosen.src = "../images/chosen1.svg";
+                bottle1.src = "images/active1.svg";
+                chosen.src = "images/chosen1.svg";
             } else if (el === bottle2) {
-                bottle2.src = "../images/active2.svg";
-                chosen.src = "../images/chosen2.svg";
+                bottle2.src = "images/active2.svg";
+                chosen.src = "images/chosen2.svg";
             } else if (el === bottle3) {
-                bottle3.src = "../images/active3.svg";
-                chosen.src = "../images/chosen3.svg";
+                bottle3.src = "images/active3.svg";
+                chosen.src = "images/chosen3.svg";
             } else if (el === bottle4) {
-                bottle4.src = "../images/active4.svg";
-                chosen.src = "../images/chosen4.svg";
+                bottle4.src = "images/active4.svg";
+                chosen.src = "images/chosen4.svg";
             } else if (el === bottle5) {
-                bottle5.src = "../images/active5.svg";
-                chosen.src = "../images/chosen5.svg";
+                bottle5.src = "images/active5.svg";
+                chosen.src = "images/chosen5.svg";
             } else if (el === bottle6) {
-                bottle6.src = "../images/active6.svg";
-                chosen.src = "../images/chosen6.svg";
+                bottle6.src = "images/active6.svg";
+                chosen.src = "images/chosen6.svg";
             }
         });
     });
@@ -165,7 +165,7 @@ function testPerfume() {
                 element = document.createElement("img");
                 element.classList.add("final-item", "star-s");
             }
-            element.src = "../images/star.svg";
+            element.src = "images/star.svg";
         }
 
         element.style.left = `${x}px`;
