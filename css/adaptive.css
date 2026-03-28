@@ -1,0 +1,202 @@
+@media screen and (min-width: 768px) and (max-width: 1200px) {
+
+    /* containers */
+
+    section {
+        padding: 60px 40px;
+    }
+
+    #hero {
+        height: 60vh;
+    }
+
+    #footer {
+        padding: 40px 40px;
+    }
+
+    .lab-container-interactive {
+        display: flex;
+        width: 100%;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .feeling-container {
+        gap: 30px;
+        width: auto;
+    }
+
+    .package-container {
+        gap: 10px
+    }
+
+    /* fonts */
+
+    h2 {
+        font-size: 45px;
+    }
+
+    .text {
+        font-size: 16px;
+    }
+
+    .running-line-item {
+        font-size: 30px;
+    }
+
+    #counter {
+        font-size: 35px;
+    }
+
+    .final-word {
+        font-size: 30px;
+    }
+
+    /* images */
+
+    .feeling {
+        height: 37px;
+    }
+
+    .img-lab {
+        position: absolute;
+        width: 270px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .img-package {
+        width: calc((100% - 50px) / 6)
+    }
+
+    .img-final {
+        width: 300px;
+    }
+
+    .star-l {
+        width: 50px;
+    }
+
+    .star-m {
+        width: 30px;
+    }
+
+    .star-s {
+        width: 18px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+
+    /* containers */
+
+    section {
+        padding: 40px 20px;
+    }
+
+    #header {
+        padding: 20px;
+    }
+
+    #hero {
+        height: 50vh;
+    }
+
+    #footer {
+        padding: 20px;
+    }
+
+    .heading-container {
+        gap: 10px;
+        margin-bottom: 20px;
+    }
+
+    .feeling-container {
+        gap: 20px;
+        width: auto;
+    }
+
+    .package-container {
+        gap: 10px;
+        flex-wrap: wrap;
+    }
+
+    /* fonts */
+
+    h2 {
+        font-size: 35px;
+    }
+
+    .text {
+        font-size: 14px;
+    }
+
+    .running-line-item {
+        font-size: 20px;
+    }
+
+    #counter {
+        margin-top: 40px;
+        font-size: 25px;
+    }
+
+    .final-word {
+        font-size: 20px;
+    }
+
+    /* images */
+
+    .logo {
+        width: 100px;
+    }
+
+    .feeling {
+        height: 21px;
+    }
+
+    .img-lab {
+        margin-top: 100px;
+        position: absolute;
+        width: 150px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .img-package {
+        width: calc((100% - 20px) / 3)
+    }
+
+    .img-final {
+        width: 200px;
+    }
+
+    .star-l {
+        width: 34px;
+    }
+
+    .star-m {
+        width: 22px;
+    }
+
+    .star-s {
+        width: 12px;
+    }
+
+    /* other elements */
+
+    #calmness, #joy {
+        transform: translateX(30px);
+    }
+
+    #warm {
+        transform: translateX(10px);
+    }
+
+    #hope, #love {
+        transform: translateX(-30px);
+    }
+
+    #cosiness {
+        transform: translateX(-10px);
+    }
+}

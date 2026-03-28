@@ -26,6 +26,7 @@ section {
     background-size: 100% 100%;
 
     justify-content: center;
+    position: relative;
 }
 
 #lab {
@@ -34,10 +35,11 @@ section {
 }
 
 #final {
-    background-image: url(../images/grad-bg.png);
+    background-image: url(../images/grad-bg-1.png);
     background-size: cover;
     overflow: hidden;
     position: relative;
+    animation: background-final 10s ease-in-out infinite;
 }
 
 #footer {
@@ -159,6 +161,10 @@ h2 {
     animation: running-line-anim 3s ease-in-out infinite alternate;
 }
 
+#running-text-end {
+    text-align: center;
+}
+
 #counter {
     font-family: "Literature Decor";
     font-size: 50px;
@@ -249,6 +255,6 @@ h2 {
 .final-item {
     position: absolute;
     pointer-events: none;
-    user-select: none;
-    animation: disappear 3s;
+    animation: disappear 3s forwards;
+    transform: translate(-50%, -50%);
 }

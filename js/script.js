@@ -1,6 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
     heroCircle();
-    createSmell()
+    heroStars();
+    createSmell();
     chooseBottle();
     testPerfume();
     runningEnd();
@@ -34,6 +35,25 @@ function heroCircle() {
 
         runningHeroArr[i].style.animationDelay = `${i * 0.2}s`;
     }
+}
+
+function heroStars() {
+    const hero = document.getElementById("hero");
+    
+    
+    let canCreate = true;
+
+    hero.addEventListener("mousemove", (e) => {
+        if (!canCreate) return;
+        const rect = hero.getBoundingClientRect();
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
+        createStar(hero, x, y);
+        canCreate = false;
+        setTimeout(()=> {
+            canCreate=true;
+        }, 500);
+    } );
 }
 
 function createSmell() {
@@ -141,41 +161,14 @@ function testPerfume() {
         const x = e.clientX - rect.left;
         const y = e.clientY - rect.top;
 
-        createElement(x,y);
-    })
-
-    function createElement(x,y) {
-        let element;
         const randomElementNum = Math.floor(Math.random() * 2);
 
-        if (randomElementNum === 0) {
-            const randomWord = feelingsArr[Math.floor(Math.random() * feelingsArr.length)];
-            element = document.createElement("div");
-            element.classList.add("final-item", "final-word");
-            element.textContent = randomWord;
+        if (randomElementNum === 0 && feelingsArr.length > 0) {
+            createWord(final, x, y);
         } else {
-            const randomStar = Math.floor(Math.random() * 3);
-            if (randomStar === 0) {
-                element = document.createElement("img");
-                element.classList.add("final-item", "star-l");
-            } else if (randomStar === 1) {
-                element = document.createElement("img");
-                element.classList.add("final-item", "star-m");
-            } else {
-                element = document.createElement("img");
-                element.classList.add("final-item", "star-s");
-            }
-            element.src = "images/star.svg";
+            createStar(final, x, y);
         }
-
-        element.style.left = `${x}px`;
-        element.style.top = `${y}px`;
-        final.appendChild(element);
-
-        setTimeout(() => {
-            element.remove();
-        }, 3000);
-    }
+    });
 }
 
 function runningEnd() {
@@ -191,3 +184,45 @@ function runningEnd() {
     }
 
 }
+
+function createStar(container, x, y) {
+    const star = document.createElement("img");
+    const randomStar = Math.floor(Math.random() * 3);
+
+    star.classList.add("final-item");
+
+    if (randomStar === 0) {
+        star.classList.add("star-l");
+    } else if (randomStar === 1) {
+        star.classList.add("star-m");
+    } else {
+        star.classList.add("star-s");
+    }
+
+    star.src = "images/star.svg"
+    star.style.left = `${x}px`;
+    star.style.top = `${y}px`;
+
+    container.appendChild(star);
+
+    setTimeout(() => {
+        star.remove();
+    }, 3000);
+}
+
+function createWord(container, x, y) {
+    const word = document.createElement("div");
+    const randomWord = feelingsArr[Math.floor(Math.random() * feelingsArr.length)];
+
+    word.classList.add("final-item", "final-word");
+    word.textContent = randomWord;
+    word.style.left = `${x}px`;
+    word.style.top = `${y}px`;
+
+    container.appendChild(word);
+
+    setTimeout(() => {
+        word.remove();
+    }, 3000);
+}
+

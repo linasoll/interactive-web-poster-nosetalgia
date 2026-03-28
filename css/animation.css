@@ -28,6 +28,21 @@
 @keyframes disappear {
     100% {
         opacity: 0;
-        transform: scale(1.5);
+        transform: translate(-50%, -50%) scale(1.5);
+    }
+}
+
+@keyframes background-final {
+    0%, 100% {
+        background-image: url(../images/grad-bg-1.png);
+    }
+    25% {
+        background-image: url(../images/grad-bg-2.png);
+    }
+    50% {
+        background-image: url(../images/grad-bg-3.png);
+    }
+    75% {
+        background-image: url(../images/grad-bg-4.png);
     }
 }
